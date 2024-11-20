@@ -1,4 +1,5 @@
 large_list = [1, 5, 10, 15, 20, 25, 27, 30, 35, 40]
+
 def selection_sort(array):
     array_length = len(array)
     while array_length > 0:
@@ -36,3 +37,13 @@ def binary_sort(array, val):
         print("Элемент не найден")
 
 binary_sort(large_list, 35)
+
+def bubble_sort(array):
+    n = len(array)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
+    return array
+
+print(bubble_sort(large_list))
